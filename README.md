@@ -18,8 +18,8 @@ Planning and distribution of work
 - Descriptive statistics, mean/variance/modes. Examine for whole data vs seasonal (split into days/months/years)? **All of us!!**
 - Consider adding more measurements of temperature and/or wind from different stations (where are the big solar plants and wind parks in Finland)
 - What variables can we use if we need their predictions?
-- Carry out Augmented Dickey-Fuller (ADF) Test to check for stationarity of time series -> Tells if differencing is required in the model
-- EDA on time series model
+- Carry out Augmented Dickey-Fuller (ADF) Test to check for stationarity of time series -> Tells if differencing is required in the model **Ville**
+- EDA on time series model **Ville**
 - weather forecast: given location (coordinates or city name), desired measurements (temperature, wind), and length of forecase return data: open-meteo API **Ahsan**
 - Fingrid API: given length of forecast, return electricity consumption and production forecast data **Emil**
 
