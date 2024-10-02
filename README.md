@@ -3,6 +3,20 @@ This is a repository for the "Introduction to data science" course project.
 
 The topic is on predicting the price of spot-electricity in Finland.
 
+# 2.10.2024 MoM
+- Holidays included
+- Electricity production and consumption for 2024
+- Electricity production and consumptions forecast API taken into use, 24 hours
+- Weather forecast API is also in use, 14 day forecast
+
+- Outliers, when new features in use / Justify removal of high/very low price samples
+- Time series model fitting function to be made still /Ville
+- Metrics to be decided /Ville
+- No nuclear or import/export due to lack of forecasts
+- Still descriptive statistics / EDA
+- Skip additional weather measurements from different locations, can be done later
+- ADF to be done /Ville
+
 # 25.9.2024 MoM
 Planning and distribution of work
 - Outlier removing, -50 cent day to be removed **Ahsan**
