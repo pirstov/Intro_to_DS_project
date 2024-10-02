@@ -13,9 +13,19 @@ The topic is on predicting the price of spot-electricity in Finland.
 - Time series model fitting function to be made still /Ville
 - Metrics to be decided /Ville
 - No nuclear or import/export due to lack of forecasts
-- Still descriptive statistics / EDA
+- Still descriptive statistics / EDA **EVERYONE**
 - Skip additional weather measurements from different locations, can be done later
 - ADF to be done /Ville
+
+- Fingrid API further studies, forecasts /Emil
+
+- Machine learning models /Ahsan
+- File splitting
+    - Data preprocessing and EDA 
+    - Time series modeling
+    - Machine learning
+    - Forecasting
+    - User interface for checking the prediction
 
 # 25.9.2024 MoM
 Planning and distribution of work
