@@ -10,6 +10,7 @@ The topic is on predicting the price of spot-electricity in Finland.
 - Random forest model / Ahsan
 - Model trying / Emil
 - Data preprocessing and model split into separate files / Ville
+- Create a ppt, add to repo and sketch out / Ville
 
 # 9.10.2024 MoM on spotlight presentation
 - Spotlight session planning, 3 minutes
