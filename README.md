@@ -3,7 +3,15 @@ This is a repository for the "Introduction to data science" course project.
 
 The topic is on predicting the price of spot-electricity in Finland.
 
-# 9.10.2024 MoM
+# 9.10.2024 MoM pt. 2
+- EDA, correlations between variables and spot price / Emil
+- model parameterization, how to increase "random" behavior / Ville
+- Add holidays into model / Ville
+- Random forest model / Ahsan
+- Model trying / Emil
+- Data preprocessing and model split into separate files / Ville
+
+# 9.10.2024 MoM on spotlight presentation
 - Spotlight session planning, 3 minutes
 - Structure: CHALLENGE / SOLUTION / WHY
     - Problem/challenge: Many people in Finland are using spot price. Spot prices available one day prior, would be nice to have information for a longer period to plan electricity consumption better
@@ -21,9 +29,6 @@ The topic is on predicting the price of spot-electricity in Finland.
     - Avoid surprises in the form of sudden long-lasting price hikes
     - Slides: same figure as previous slide, but with plan of activities to optimize savings
       
- 
-
-
 # 2.10.2024 MoM
 - Holidays included
 - Electricity production and consumption for 2024
