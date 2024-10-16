@@ -3,6 +3,50 @@ This is a repository for the "Introduction to data science" course project.
 
 The topic is on predicting the price of spot-electricity in Finland.
 
+# 16.10.2024
+- Random forest found good, TPOT helped
+- Deliverables, website and technical report
+- Structure
+    1. Introduction (topic, "explanation on how were things done", inside intro or separately before canvas)
+    2. Mini-project canvas
+    3. Address each of the parts in the canvas in order, left-to-right, top-to-bottom. For each part, consider the list below and also the moodle deliverables page.
+    4. Learning outcomes
+    5. Summary
+- Technical report, lets use Latex
+    - Mini-project canvas
+    - Consider adding some of the data preprocessing figures / exploratory analysis results
+    - Timeline: use MoMs as backup material
+    - Discuss data, where and what. How was the data processed?
+    - Data APIs, what kind and how?
+    - What didn't work? Many things, time series model & XGBoost
+    - Data limitations, forecasts not necessarily available for interesting inputs (nuclear power etc.)
+    - Delta from initial plan: different predictor, different input variables
+    - If anything comes to mind, "what would you have done differently now?"
+    - More / better input variables. More weather measurements across Finland
+    - Explanation on how were things done:
+        - Telegram used for communication, weekly in-person meetings at Campus
+        - Version control, git with clear repository structure (split implementation into files for each step)
+        - Language: python
+        - Format: jupyter notebooks
+    - Learning outcomes:
+        - Data preprocessing: data to correct form
+        - Familiarizing ourselves with different AI models
+        - Learning to use APIs
+        - Getting comfortable with version control, Git
+        - Collaboration
+        - Prediction is difficult!
+        - Planning short business pitches
+     
+- Website Ahsan
+- User settings:
+      - Length of forecast/prediction
+      - Buttons for setting the x-axis (one week future, previous week, previous month, previous year)
+      - Interactive figure
+          - x- and y- axes can be adjusted and shifted so that the user can look at the upcoming prediction or last week
+      - Average fixed price included for reference
+      - next-day electricity prices when available
+      - Prediction from random forest
+
 # 9.10.2024 MoM pt. 2
 - EDA, correlations between variables and spot price / Emil
 - model parameterization, how to increase "random" behavior / Ville
