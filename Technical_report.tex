@@ -80,6 +80,18 @@ This is the introduction that should contain some pretty general stuff. Below, s
 	\item What kind of data is used?
 	\item How is data accessed?
 	\item What kind of preprocessing is done?
+
+	Firstly, we gathered historical spot price data for Finland from the website https://porssisahko.net/tilastot. Additionally, we collected weather data from the Finnish Meteorological Institute (https://www.ilmatieteenlaitos.fi/avoin-data/) and electricity consumption and production data from Fingrid's open data platform (https://data.fingrid.fi/en/datasets/124 and https://data.fingrid.fi/en/datasets/192, respectively). All datasets were in Excel format and were downloaded using specific start and end dates as parameters. The data was then imported into a Jupyter notebook using Python, where we created a Pandas DataFrame for each dataset. We proceeded to preprocess the data to ensure a consistent structure across all datasets.
+
+(mention the APIs)
+
+Preprocessing began with the spot price data, which consisted of two columns: 'Aika' (time) and 'Hinta (snt/kWh)' (price). We adjusted the time column so that prices were aligned with every even hour, and this format was applied to the other datasets as well. In the weather data, the year, month, day, and hour were originally in separate columns, so we combined them into a single datetime object. Since the observations were already recorded hourly, no further significant modifications were needed. Different elements of the weather data, such as mean temperature, were stored in separate columns, similar to the electricity price data.
+
+The electricity consumption and production data, retrieved from the same open data platform, had similar structures. Both datasets included two time-related columns 'startTime' and 'endTime' along with a column for the production or consumption values. We consolidated the two time columns into a single one, following the same approach used for the weather data. Additionally, the time column still contained extraneous characters, which were cleaned up, and the values were converted into datetime objects.
+
+The main difference between the production and consumption datasets was the frequency of observations: production data was recorded every three minutes, while consumption data was recorded hourly. To standardize the data, we calculated the hourly average for the production data to match the desired format.
+
+Once all the datasets were in the required format, we merged them into one comprehensive dataframe. Finally, we performed imputation, replacing any missing values with the column medians.
 \end{itemize}
 
 % ---- EDA and Visualizations ----
