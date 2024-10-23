@@ -8,6 +8,7 @@ The topic is on predicting the price of spot-electricity in Finland.
 - Web page final touches / Ahsan
 - Communication of results / learning (some technical content maybe) + small additions across the pdf / Ville
 - Include some MoM notes to report maybe / Ville
+- Future improvements: longer prediction horizon, select input data with long forecasts available / Ville
 
 # 16.10.2024
 - Random forest found good, TPOT helped
