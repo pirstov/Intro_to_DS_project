@@ -3,6 +3,12 @@ This is a repository for the "Introduction to data science" course project.
 
 The topic is on predicting the price of spot-electricity in Finland.
 
+# 23.10.2024
+- EDA section of report / Emil
+- Web page final touches / Ahsan
+- Communication of results / learning (some technical content maybe) + small additions across the pdf / Ville
+- Include some MoM notes to report maybe / Ville
+
 # 16.10.2024
 - Random forest found good, TPOT helped
 - Deliverables, website and technical report
