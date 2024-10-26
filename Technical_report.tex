@@ -97,12 +97,14 @@ All the data collection and preprocessing described above was carried out in a s
 
 % ---- EDA and Visualizations ----
 \section{Exploratory Data Analysis and Visualizations}
-\begin{itemize}
-	\item What kind of EDA was done?
-	\item How was the data visualized?
-	\item What kind of findings were obtained?
-\end{itemize}
-We began the exploratory data analysis by creating pair plots using functions from the Seaborn library, which generated scatter plots and kernel density estimate plots for each variable pair. To enhance the interpretability of these plots, we added a hue to distinguish data points as either 'day' or 'night.' This was done by introducing a new column, \verb|time_of_day|, with values of 'day' or 'night' based on the hour of each observation: observations from 6:00 to 18:00 were labeled as day, and those from 18:00 to 6:00 as night. The pair plots did not reveal any notable patterns, with one clear exception: electricity consumption was generally lower at night than during the day.
+
+We began the exploratory data analysis by creating pair plots using functions from the Seaborn library, which generated scatter plots and kernel density estimate plots for each variable pair. To make these plots more informative, we added a hue to categorize data points as either 'day' or 'night.' This was achieved by introducing a new column, time_of_day, with values assigned based on the hour of each observation: data points from 6:00 to 18:00 were labeled as day, while those from 18:00 to 6:00 were labeled as night. The pair plots revealed few notable patterns except for one clear trend: electricity consumption was consistently lower at night than during the day.
+
+In addition to pair plots, we visualized each variable with line plots, where the y-axis represented observed values and the x-axis represented time. These line plots highlighted clear seasonal patterns, with temperatures naturally peaking in the summer months, while electricity production and consumption were significantly higher in the winter.
+
+We then used box plots and the Pandas describe function to identify outliers. Outliers were detected in the average temperature and electricity price columns, so we removed the observations containing these outliers to ensure they would not skew the analysis.
+
+Additional EDA techniques included autocorrelation plots, the corr function from Pandas to examine variable correlations, and further line plots to visualize trends across different time intervals - daily, weekly, and monthly - to support our assessment of seasonal patterns. Correlation analysis revealed that electricity price was most influenced by wind speed and electricity consumption. Wind speed had a negative correlation with electricity prices, while consumption showed a positive correlation.
 
 % ---- Learning ----
 \section{Learning to Predict Electricity Spot prices}
