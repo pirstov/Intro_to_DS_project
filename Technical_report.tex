@@ -98,7 +98,7 @@ All the data collection and preprocessing described above was carried out in a s
 % ---- EDA and Visualizations ----
 \section{Exploratory Data Analysis and Visualizations}
 
-We began the exploratory data analysis by creating pair plots using functions from the Seaborn library, which generated scatter plots and kernel density estimate plots for each variable pair. To make these plots more informative, we added a hue to categorize data points as either 'day' or 'night.' This was achieved by introducing a new column, time_of_day, with values assigned based on the hour of each observation: data points from 6:00 to 18:00 were labeled as day, while those from 18:00 to 6:00 were labeled as night. The pair plots revealed few notable patterns except for one clear trend: electricity consumption was consistently lower at night than during the day.
+We began the exploratory data analysis by creating pair plots using functions from the Seaborn library, which generated scatter plots and kernel density estimate plots for each variable pair. To make these plots more informative, we added a hue to categorize data points as either '\verb|day|' or '\verb|night|.' This was achieved by introducing a new column, \verb|time_of_day|, with values assigned based on the hour of each observation: data points from 6:00 to 18:00 were labeled as day, while those from 18:00 to 6:00 were labeled as night. The pair plots revealed few notable patterns except for one clear trend: electricity consumption was consistently lower at night than during the day.
 
 In addition to pair plots, we visualized each variable with line plots, where the y-axis represented observed values and the x-axis represented time. These line plots highlighted clear seasonal patterns, with temperatures naturally peaking in the summer months, while electricity production and consumption were significantly higher in the winter.
 
@@ -121,8 +121,6 @@ One hard constraint for prediction was arising from the availability of forecast
 The results were communicated through a webpage found \href{https://connect.posit.cloud/AhsanAbbas101/content/0192c52c-7101-3655-bc34-0e4733cd46de}{here}. It contains an interactive graph for the user to examine the electricity spot price predictions for the upcoming 21 hours. The graph can present the data as either line or bar plot, selectable by the user in the settings column found on the left. Moreover, the graph can be zoomed, cursor for data point values is available, and the graph can even be saved. The user can also view the true spot prices to compare the accuracy of the method by checking a box on the left column of the webpage. This simple and clean implementation should enable the user to effortlessly see the spot price predictions for the future in a quick glance to make decisions regarding her/his electricity consumption.
 
 The webpage implementation was based on the Python library \verb|shiny|. This allowed us to create the web user interface purely through Python. The historical data was stored to a cloud database using \verb|sqlite| in Python, and forecast data was accessed through the API methods mentioned in the data collection and preprocessing section. The prediction model was loaded from the stored joblib file.
-
-
 
 
 % ---- Summary ----
