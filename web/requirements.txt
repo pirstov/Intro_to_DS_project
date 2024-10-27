@@ -1,7 +1,11 @@
 faicons
+joblib
+pandas
+plotly
+python_dateutil
+Requests
 shiny
 shinywidgets
-plotly
-pandas
-ridgeplot
 sqlitecloud
+openpyxl
+scikit-learn

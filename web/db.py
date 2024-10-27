@@ -2,6 +2,8 @@ import sqlitecloud
 import pandas as pd
 from keys import DB_CONNECTION_STRING
 
+from datetime import datetime
+from dateutil.relativedelta import relativedelta
 
 columns = [
     'Aika',                        # Timestamp
@@ -29,7 +31,7 @@ def get_last_n_rows(n):
     conn.close()
     return df
 
-def get_data_from_db():
+def get_all_data_from_db():
 
     conn = sqlitecloud.connect(DB_CONNECTION_STRING)
 
@@ -41,8 +43,36 @@ def get_data_from_db():
     conn.close()
     return df
 
-df = get_last_n_rows(7*24)
-print(df.shape)
+def get_rows_between(startDate, endDate):
+
+    query = f"SELECT * FROM PRICES WHERE Aika BETWEEN '{str(startDate)}' AND '{str(endDate)}';"
+
+    conn = sqlitecloud.connect(DB_CONNECTION_STRING)
+
+    cursor = conn.execute(query)
+    result = cursor.fetchall()
+
+    df = pd.DataFrame(result,columns=columns)
+
+    conn.close()
+    return df
+def get_data():
+
+    df = get_last_n_rows(1)
+    df['Aika'] = pd.to_datetime(df['Aika'])
+    last_datetime = df.iloc[0]['Aika'] 
+    print(df.iloc[0])
+    yesterday = datetime.now().date() - relativedelta(days=1)
+    print(yesterday)
+
+    if last_datetime.date() == yesterday: 
+        print('Date available')
+    else:
+        pass        
+
+#get_data()
+
+#print(get_rows_between(datetime(2024,9,21),datetime(2024,10,25,0,0,0)))
 
 """
 data = pd.read_csv('./.data/data.csv')
